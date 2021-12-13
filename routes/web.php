@@ -19,6 +19,6 @@ Route::get('/', function () {
 
 Route::get('new_tenant/{name}', function ($name) {
     $tenant = \App\Models\Tenant::create(['id'=>$name]);
-    $tenant->domains()->create(['domain'=>$name]);
+    $tenant->domains()->create(['domain'=>$name.'.osama96.com']);
     return response(['success'=>true]);
 });
